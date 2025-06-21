@@ -1,0 +1,22 @@
+services:
+  - type: web
+    name: healthcare-system-backend
+    env: docker
+    dockerfilePath: ./Dockerfile
+    envVars:
+      - key: JWT_SECRET
+        sync: false
+      - key: MONGODB_URI
+        sync: false
+      - key: PORT
+        value: 8080
+      - key: CORS_ALLOWED_ORIGINS
+        sync: false
+      - key: SMTP_HOST
+        sync: false
+      - key: SMTP_PORT
+        sync: false
+      - key: SMTP_USERNAME
+        sync: false
+      - key: SMTP_PASSWORD
+        sync: false 
